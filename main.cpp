@@ -18,7 +18,7 @@ char Min(char a, char b) {
 
 int main(void) {
 	printf("%d\n", Min<int>(1, 2));
-	printf("%f\n", Min<float>(1, 2));
+	printf("%f\n", Min<float>(10, 2));
 	printf("%f\n", Min<double>(1, 2));
 	printf("%c\n", Min<char>(1,2));
 	return 0;

@@ -21,6 +21,6 @@ int main(void) {
 	printf("%d\n", Min<int>(1, 2));
 	printf("%f\n", Min<float>(10, 2));
 	printf("%f\n", Min<double>(1, 2));
-	Min<char>('1', '2');
+	Min<char>('a', 'b');
 	return 0;
 }

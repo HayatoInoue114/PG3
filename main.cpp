@@ -1,18 +1,24 @@
 #include <stdio.h>
+void General(int time, int gold) {
+	int result = time * gold;
+	printf("一般的%d\n", result);
+}
 
-int Recursive(int time,int gold,int num) {
-	int result = num * time;
+int Recursive(int time,int gold) {
 	if (time <= 1) {
-		printf("一般的%d\n再帰的%d", result, gold);
+		printf("再帰的%d\n", gold);
 		return (0);
 	}
 	time--;
-	return(gold + Recursive(time,gold * 2 - 50,result));
+	return(gold + Recursive(time,gold * 2 - 50));
 }
 
 int main(void) {
-	Recursive(4,100,1072);
+	int time = 9;
 
+	General(time, 1072);
+
+	Recursive(time,100);
 
 	return 0;
 }

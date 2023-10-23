@@ -4,6 +4,8 @@
 #include <thread>
 #include <chrono>
 #include <random>
+#include <stdio.h>
+#include <functional>
 
 int GetRandom(int min, int max) {
     static int flag;
@@ -42,11 +44,11 @@ int main() {
     std::cin >> userGuess;
 
     // サイコロを振る（1から6の範囲でランダムな数を生成）
-    int diceRoll = GetRandom(1, 6);
+    std::function<int(int)> diceRoll = [](int i) { return GetRandom(1, 6); };
 
     // コールバック関数を呼び出す
     CallbackFunction callback = ShowResult;
-    callback(diceRoll, userGuess);
+    callback((int)diceRoll, userGuess);
 
     return 0;
 }

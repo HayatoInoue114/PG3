@@ -6,6 +6,7 @@
 #include <random>
 #include <stdio.h>
 #include <functional>
+#include <Windows.h>
 
 int GetRandom(int min, int max) {
 	std::random_device rd;
@@ -38,10 +39,18 @@ int main() {
 		else {
 			std::cout << "不正解。" << std::endl;
 		}
-		};
+	};
 
 	// コールバック関数を呼び出す
 	callback(diceRoll, userGuess);
 
 	return 0;
 }
+
+//typedef void (*PFunc)(int*);
+//
+//void setTimeout(PFunc p, int second) {
+//	Sleep(second * 1000);
+//
+//	p(&second);
+//}

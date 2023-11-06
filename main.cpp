@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 void General(int time, int gold) {
 	int result = time * gold;
 	printf("一般的%d\n", result);

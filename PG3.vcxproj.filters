@@ -13,10 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\guitar">
+      <UniqueIdentifier>{0b3fba40-c96a-46e3-8dda-7caab158be17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\trumpet">
+      <UniqueIdentifier>{1be350e5-4124-4887-a371-fcb9503d6b99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="guitar.cpp">
+      <Filter>ソース ファイル\guitar</Filter>
+    </ClCompile>
+    <ClCompile Include="trumpet.cpp">
+      <Filter>ソース ファイル\trumpet</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="performance.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="guitar.h">
+      <Filter>ソース ファイル\guitar</Filter>
+    </ClInclude>
+    <ClInclude Include="trumpet.h">
+      <Filter>ソース ファイル\trumpet</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

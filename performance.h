@@ -3,7 +3,7 @@
 class Performance
 {
 public:
-	virtual void Play();
+	virtual void Play() = 0;
 
 private:
 

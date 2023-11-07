@@ -5,7 +5,10 @@
 int main() {
 	Performance* performances[2];
 
-	for (int i = 0; i < 1; i++) {
+	/*performances[0] = new Guitar;
+	performances[1] = new Trumpet;*/
+
+	for (int i = 0; i < 2; i++) {
 		if(i < 1){
 			performances[i] = new Guitar;
 		}
@@ -13,10 +16,10 @@ int main() {
 			performances[i] = new Trumpet;
 		}
 	}
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < 2; i++) {
 		performances[i]->Play();
 	}
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < 2; i++) {
 		delete performances[i];
 	}
 

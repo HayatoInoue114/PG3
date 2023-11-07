@@ -1,4 +1,5 @@
 #include "trumpet.h"
+#include <stdio.h>
 
 Trumpet::Trumpet()
 {

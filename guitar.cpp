@@ -1,4 +1,5 @@
 #include "guitar.h"
+#include <stdio.h>
 
 Guitar::Guitar()
 {

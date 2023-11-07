@@ -1,26 +1,23 @@
-#include "guitar.h"
-#include "trumpet.h"
-#include "performance.h"
+#include <stdio.h>
+#include "IShape.h"
+#include "Circle.h"
+#include "Rectangle.h"
 
-int main() {
-	Performance* performances[2];
-
-	/*performances[0] = new Guitar;
-	performances[1] = new Trumpet;*/
+int main(void) {
+	IShape* shape[2]{};
 
 	for (int i = 0; i < 2; i++) {
-		if(i < 1){
-			performances[i] = new Guitar;
+		if (i < 1) {
+			shape[i] = new Circle();
 		}
 		else {
-			performances[i] = new Trumpet;
+			shape[i] = new Rectangle();
 		}
 	}
+
 	for (int i = 0; i < 2; i++) {
-		performances[i]->Play();
-	}
-	for (int i = 0; i < 2; i++) {
-		delete performances[i];
+		shape[i]->size();
+		shape[i]->draw();
 	}
 
 	return 0;

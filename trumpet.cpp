@@ -9,5 +9,5 @@ Trumpet::~Trumpet()
 }
 
 void Trumpet::Play() {
-
+	printf("ƒvƒ@`\n");
 }

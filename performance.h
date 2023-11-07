@@ -5,9 +5,6 @@
 class Performance
 {
 public:
-	Performance();
-	~Performance();
-
 	virtual void Play();
 
 private:

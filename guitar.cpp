@@ -9,5 +9,5 @@ Guitar::~Guitar()
 }
 
 void Guitar::Play() {
-
+	printf("ジャカジャカ\n");
 }

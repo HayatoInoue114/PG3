@@ -19,5 +19,7 @@ int main() {
 	std::cout << "float, double   " << comparer5.Min() << std::endl;
 	std::cout << "double, double  " << comparer6.Min() << std::endl;
 
+	//printf("%d", comparer1);
+
 	return 0;
 }

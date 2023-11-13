@@ -1,19 +1,19 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 
 template <typename T1, typename T2>
 
 class Comparer {
 public:
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	
 	Comparer(T1 number1, T2 number2) : number1_(number1), number2_(number2) {}
 
-	// 2‚Â‚Ì’l‚ğ”äŠr‚µ‚Ä¬‚³‚¢•û‚Ì’l‚ğ•Ô‚·ŠÖ”
+	
 	T1 Min() {
 		if (number1_ < number2_) {
 			return static_cast<T1>(number1_);
 		}
-		else if (number1_ > number2_) {
+		else {
 			return static_cast<T2>(number2_);
 		}
 

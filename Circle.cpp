@@ -1,4 +1,4 @@
-#include "Circle.h"
+Ôªø#include "Circle.h"
 #include <stdio.h>
 
 Circle::Circle() {
@@ -13,6 +13,6 @@ void Circle::size() {
 }
 
 void Circle::draw() {
-	printf("â~ÇÃîºåa = %d\n", radius_);
-	printf("â~ÇÃñ êœ = %.2f\n\n\n", result_);
+	printf("ÂçäÂæÑ = %d\n", radius_);
+	printf("Èù¢Á©ç = %.2f\n\n\n", result_);
 }

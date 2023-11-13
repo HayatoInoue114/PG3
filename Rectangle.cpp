@@ -1,4 +1,4 @@
-#include "Rectangle.h"
+ï»¿#include "Rectangle.h"
 #include <stdio.h>
 
 Rectangle::Rectangle() {
@@ -14,7 +14,7 @@ void Rectangle::size() {
 }
 
 void Rectangle::draw() {
-	printf("‹éŒ`‚Ìc• = %d\n", height_);
-	printf("‹éŒ`‚Ì‰¡• = %d\n", width_);
-	printf("‹éŒ`‚Ì–ÊÏ = %.0f\n", result_);
+	printf("é«˜ã• = %d\n", height_);
+	printf("æ¨ªå¹… = %d\n", width_);
+	printf("é¢ç© = %.0f\n", result_);
 }

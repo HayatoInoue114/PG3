@@ -1,4 +1,4 @@
-#include "trumpet.h"
+﻿#include "trumpet.h"
 #include <stdio.h>
 
 Trumpet::Trumpet()
@@ -10,5 +10,5 @@ Trumpet::~Trumpet()
 }
 
 void Trumpet::Play() {
-	printf("�v�@�`\n");
+	printf("ぱっぱらぱー\n");
 }

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "performance.h"
 
 class Trumpet : public Performance

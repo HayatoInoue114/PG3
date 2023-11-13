@@ -1,4 +1,4 @@
-#include "guitar.h"
+ï»¿#include "guitar.h"
 #include <stdio.h>
 
 Guitar::Guitar()
@@ -10,5 +10,5 @@ Guitar::~Guitar()
 }
 
 void Guitar::Play() {
-	printf("ƒWƒƒƒJƒWƒƒƒJ\n");
+	printf("ã‚¸ãƒ£ãƒ³ã‚¸ãƒ£ãƒ³\n");
 }

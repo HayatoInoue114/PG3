@@ -10,27 +10,34 @@
 
 int GetRandom(int min, int max) {
 	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int> dist(min, max);
-	return dist(gen);
+	std::mt19937 mt(rd());
+	std::uniform_int_distribution<> rand(min, max);
+	return rand(mt);
+}
+
+//typedef void (*PFunc)();
+typedef std::function<void()> PFunc;
+
+
+void setTimeout(PFunc p, int second) {
+	Sleep(second * 1000);
+
+	p();
 }
 
 int main() {
-	std::cout << "サイコロを振ります。半か丁か、どちらかを当ててください（半/丁）: ";
-	std::string userGuess;
-	std::cin >> userGuess;
-
-	// サイコロを振る（1から6の範囲でランダムな数を生成）
-	int diceRoll = GetRandom(1, 6);
-
-	std::function<void(int, std::string)> callback = [&userGuess](int diceRoll, std::string guess) {
+	std::function<void(int, std::string)> callback = [](int diceRoll, std::string guess) {
 		std::cout << "サイコロの目: " << diceRoll << std::endl;
 
 		// 半か丁かを判定
-		std::string result = (diceRoll % 2 == 0) ? "半" : "丁";
+		std::string result;
 
-		// 3秒待つ
-		Sleep(3000);
+		if (diceRoll % 2 == 0) {
+			result = "丁";
+		}
+		else {
+			result = "半";
+		}
 
 		// 予想と結果を比較
 		if (guess == result) {
@@ -41,8 +48,17 @@ int main() {
 		}
 	};
 
-	// コールバック関数を呼び出す
-	callback(diceRoll, userGuess);
+	std::cout << "サイコロを振ります。半か丁か、どちらかを当ててください（半/丁）: ";
+	std::string userGuess;
+	std::cin >> userGuess;
+
+	// サイコロを振る
+	int diceRoll = GetRandom(1, 6);
+
+	PFunc pCallback{};
+	pCallback = std::bind(callback, diceRoll, userGuess);
+	setTimeout(pCallback, 3);
 
 	return 0;
 }
+

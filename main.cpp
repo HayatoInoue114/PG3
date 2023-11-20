@@ -6,6 +6,7 @@
 #include <random>
 #include <stdio.h>
 #include <functional>
+#include <Windows.h>
 
 int GetRandom(int min, int max) {
 	std::random_device rd;
@@ -29,7 +30,7 @@ int main() {
 		std::string result = (diceRoll % 2 == 0) ? "半" : "丁";
 
 		// 3秒待つ
-		std::this_thread::sleep_for(std::chrono::seconds(3));
+		Sleep(3000);
 
 		// 予想と結果を比較
 		if (guess == result) {
@@ -38,7 +39,7 @@ int main() {
 		else {
 			std::cout << "不正解。" << std::endl;
 		}
-		};
+	};
 
 	// コールバック関数を呼び出す
 	callback(diceRoll, userGuess);

@@ -11,7 +11,7 @@ int main(void) {
 		"Ueno",
 		"Uguisudani",
 		"Nippori",
-		"Nishi-Nippori",
+		//"Nishi-Nippori",
 		"Tabata",
 		"Komagome",
 		"Sugamo",
@@ -27,17 +27,44 @@ int main(void) {
 		"Ebisu",
 		"Meguro",
 		"Gotanda",
-		"Osaka",
+		"Osaki",
 		"Shinagawa",
-		"Takanawa Geteway",
+		//"Takanawa Geteway",
 		"Tamachi",
 		"Hamamatsucho",
 		"Shimbashi",
 		"Yurakucho"
 	};
 
+	std::cout << "1970" << std::endl;
+
 	for (auto itr = stations.begin(); itr != stations.end(); ++itr) {
-		
+		std::cout << *itr << "\n";
+	}
+
+	std::cout << "\n2019" << std::endl;
+
+	for (auto itr = stations.begin(); itr != stations.end(); ++itr) {
+		if (*itr == "Tabata") {
+			stations.insert(itr, "Nishi-Nippori");
+			//++itr;
+		}
+	}
+
+	for (auto itr = stations.begin(); itr != stations.end(); ++itr) {
+		std::cout << *itr << "\n";
+	}
+
+	std::cout << "\n2021" << std::endl;
+
+	for (auto itr = stations.begin(); itr != stations.end(); ++itr) {
+		if (*itr == "Tamachi") {
+			stations.insert(itr, "Takanawa Geteway");
+			//++itr;
+		}
+	}
+
+	for (auto itr = stations.begin(); itr != stations.end(); ++itr) {
 		std::cout << *itr << "\n";
 	}
 

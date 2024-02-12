@@ -5,13 +5,10 @@
 #include <iostream>
 #include <list>
 
-bool CompareId(const std::string& strA, const std::string& strB) {
-
-	int numStrA = std::stoi(strA.substr(1, 3) + strA.substr(5, 4));
-
-	int numStrB = std::stoi(strB.substr(1, 3) + strB.substr(5, 4));
-
-	return numStrA < numStrB;
+bool CompareId(const std::string& a, const std::string& b) {
+	int A = std::stoi(a.substr(1, 3) + a.substr(5, 4));
+	int B = std::stoi(b.substr(1, 3) + b.substr(5, 4));
+	return A < B;
 
 }
 

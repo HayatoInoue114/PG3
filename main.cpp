@@ -23,7 +23,7 @@ int main() {
 	// サイコロを振る（1から6の範囲でランダムな数を生成）
 	int diceRoll = GetRandom(1, 6);
 
-	std::function<void(int, std::string)> callback = [&userGuess](int diceRoll, std::string guess) {
+	std::function<void(int, std::string)> dinghan = [&userGuess](int diceRoll, std::string guess) {
 		std::cout << "サイコロの目: " << diceRoll << std::endl;
 
 		// 半か丁かを判定
@@ -42,15 +42,8 @@ int main() {
 	};
 
 	// コールバック関数を呼び出す
-	callback(diceRoll, userGuess);
+	dinghan(diceRoll, userGuess);
 
 	return 0;
 }
 
-//typedef void (*PFunc)(int*);
-//
-//void setTimeout(PFunc p, int second) {
-//	Sleep(second * 1000);
-//
-//	p(&second);
-//}

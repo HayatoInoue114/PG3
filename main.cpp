@@ -95,5 +95,6 @@ int main() {
     p = ShowResult;
     setTimeout(p, 3, num);
 
-    return 0;
+	return 0;
 }
+
